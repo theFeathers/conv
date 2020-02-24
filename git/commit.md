@@ -22,9 +22,10 @@ long-description
 
 ---
 
-#### `scope` is the name of the part you touched `[fix:user]`
+#### `scope` is the name of the part you touched
 
-scope is optional, and can be omitted in small applications if there isn't a lot of scopes to be concerned about
+scope is optional, and can be omitted in small applications if there isn't a lot of scopes to be concerned about.
+Extended scope can be made a path, like so: `[fix:git/commit] headings`
 
 ---
 
@@ -37,5 +38,5 @@ Add `:` in the end if you add a long-desc below your message.
 #### Examples:
 
 * `[fix:user] could not find valid user`
-* `[feat:utils] asyncHandler supports middleware compose`
+* `[feat:utils] asyncHandler middleware compose`
 * `[cleanup:tests] move tests into their own dirs`

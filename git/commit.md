@@ -30,12 +30,12 @@ scope is optional, and can be omitted in small applications if there isn't a lot
 
 #### `message` is a short continuation of your action in given scope
 
+Add `:` in the end if you add a long-desc below your message.
+
+---
+
 #### Examples:
 
 * `[fix:user] could not find valid user`
 * `[feat:utils] asyncHandler supports middleware compose`
 * `[cleanup:tests] move tests into their own dirs`
-
-Add `:` in the end if you add a long-desc below your message.
-
----

@@ -90,4 +90,4 @@ Space ::= ( U+0020 )*
 Operand ::= Value
 ```
 
-This grammar is also available as a [railroad diagram](./assets/cli-railroad.md).
+This grammar is also available as a [railroad diagram](./assets/cli-railroad/index.md).

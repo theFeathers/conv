@@ -1,12 +1,11 @@
 # JavaScript style
 
-#### Code: `conv/js-style`
-
-#### Version: 1.0.0
-
-#### Author: Muthu Kumar <muthukumar@thefeathers.in>
-
-#### Org: Feathers Studio
+```
+Code: conv/js-style
+Version: 1.0.0
+Author: Muthu Kumar <muthukumar@thefeathers.in>
+Org: Feathers Studio
+```
 
 ## Specification
 

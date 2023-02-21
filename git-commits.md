@@ -1,12 +1,11 @@
 # Git Commit Style
 
-#### Code: `conv/git-commits`
-
-#### Version: 2.0.0
-
-#### Author: Muthu Kumar <muthukumar@thefeathers.in>
-
-#### Org: Feathers Studio
+```
+Code: conv/git-commits
+Version: 2.0.0
+Author: Muthu Kumar <muthukumar@thefeathers.in>
+Org: Feathers Studio
+```
 
 ## Specification
 

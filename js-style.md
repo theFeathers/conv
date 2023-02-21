@@ -4,6 +4,10 @@
 
 #### Version: 1.0.0
 
+#### Author: Muthu Kumar <muthukumar@thefeathers.in>
+
+#### Org: Feathers Studio
+
 ## Specification
 
 This is a light specification for formatting and styling JavaScript and TypeScript code. We hope to cover only the minimum for sensible formatting, and let tools such as `Prettier` and `deno fmt` handle the rest.

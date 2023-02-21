@@ -4,6 +4,10 @@
 
 #### Version: 2.0.0
 
+#### Author: Muthu Kumar <muthukumar@thefeathers.in>
+
+#### Org: Feathers Studio
+
 ## Specification
 
 Version 2.0.0 of `conv/git-commits` extends [Conventional Commits v1.0.0](https://www.conventionalcommits.org/en/v1.0.0) with the following additions:

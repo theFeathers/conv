@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="421" height="71">
+<svg xmlns="http://www.w3.org/2000/svg" width="471" height="153">
    <defs>
       <style type="text/css">
     @namespace "http://www.w3.org/2000/svg";
@@ -48,12 +48,19 @@
    <a xmlns:xlink="http://www.w3.org/1999/xlink"
        xlink:href="#Operand"
        xlink:title="Operand">
-      <rect x="299" y="3" width="74" height="32"/>
-      <rect x="297" y="1" width="74" height="32" class="nonterminal"/>
-      <text class="nonterminal" x="307" y="21">Operand</text>
+      <rect x="319" y="37" width="74" height="32"/>
+      <rect x="317" y="35" width="74" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="327" y="55">Operand</text>
+   </a>
+   <a xmlns:xlink="http://www.w3.org/1999/xlink"
+       xlink:href="#Command"
+       xlink:title="Command">
+      <rect x="319" y="103" width="84" height="32"/>
+      <rect x="317" y="101" width="84" height="32" class="nonterminal"/>
+      <text class="nonterminal" x="327" y="121">Command</text>
    </a>
    <path class="line"
-          d="m17 51 h2 m0 0 h10 m106 0 h10 m20 0 h10 m0 0 h72 m-102 0 l20 0 m-1 0 q-9 0 -9 -10 l0 -14 q0 -10 10 -10 m82 34 l20 0 m-20 0 q10 0 10 -10 l0 -14 q0 -10 -10 -10 m-82 0 h10 m62 0 h10 m40 34 h10 m0 0 h84 m-114 0 l20 0 m-1 0 q-9 0 -9 -10 l0 -14 q0 -10 10 -10 m94 34 l20 0 m-20 0 q10 0 10 -10 l0 -14 q0 -10 -10 -10 m-94 0 h10 m74 0 h10 m23 34 h-3"/>
-   <polygon points="411 51 419 47 419 55"/>
-   <polygon points="411 51 403 47 403 55"/>
+          d="m17 51 h2 m0 0 h10 m106 0 h10 m20 0 h10 m0 0 h72 m-102 0 l20 0 m-1 0 q-9 0 -9 -10 l0 -14 q0 -10 10 -10 m82 34 l20 0 m-20 0 q10 0 10 -10 l0 -14 q0 -10 -10 -10 m-82 0 h10 m62 0 h10 m60 34 h10 m74 0 h10 m-114 0 l20 0 m-1 0 q-9 0 -9 -10 l0 -12 q0 -10 10 -10 m94 32 l20 0 m-20 0 q10 0 10 -10 l0 -12 q0 -10 -10 -10 m-94 0 h10 m0 0 h84 m20 32 h10 m-164 0 h20 m144 0 h20 m-184 0 q10 0 10 10 m164 0 q0 -10 10 -10 m-174 10 v46 m164 0 v-46 m-164 46 q0 10 10 10 m144 0 q10 0 10 -10 m-134 10 h10 m84 0 h10 m-124 0 l20 0 m-1 0 q-9 0 -9 -10 l0 -12 q0 -10 10 -10 m104 32 l20 0 m-20 0 q10 0 10 -10 l0 -12 q0 -10 -10 -10 m-104 0 h10 m0 0 h94 m-134 22 v20 m164 0 v-20 m-164 20 v14 m164 0 v-14 m-164 14 q0 10 10 10 m144 0 q10 0 10 -10 m-154 10 h10 m0 0 h134 m23 -100 h-3"/>
+   <polygon points="461 51 469 47 469 55"/>
+   <polygon points="461 51 453 47 453 55"/>
 </svg>

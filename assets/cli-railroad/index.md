@@ -3,8 +3,12 @@
 ![Command](diagram/Command.svg)
 
 ```
-Command  ::= CmdIdentifier Option* Operand*
+Command  ::= CmdIdentifier Option* ( Operand* | Command+ )
 ```
+
+referenced by:
+
+- Command
 
 **CmdIdentifier:**
 
@@ -12,7 +16,7 @@ Command  ::= CmdIdentifier Option* Operand*
 
 ```
 CmdIdentifier
-         ::= Alphanumeric*
+         ::= AlphanumericAnd*
 ```
 
 referenced by:
@@ -92,7 +96,7 @@ referenced by:
 
 ```
 LongFlagOption
-         ::= '--' Alphanumeric+
+         ::= '--' Alphanumeric AlphanumericAnd*
 ```
 
 referenced by:
@@ -105,7 +109,7 @@ referenced by:
 
 ```
 LongValueOption
-         ::= '--' Alphanumeric+ OptionValueDelimiter Value
+         ::= '--' Alphanumeric AlphanumericAnd* OptionValueDelimiter Value
 ```
 
 referenced by:
@@ -138,11 +142,25 @@ Alphanumeric
 
 referenced by:
 
-- CmdIdentifier
 - LongFlagOption
 - LongValueOption
 - ShortFlagOption
 - ShortValueOption
+
+**AlphanumericAnd:**
+
+![AlphanumericAnd](diagram/AlphanumericAnd.svg)
+
+```
+AlphanumericAnd
+         ::= [0-9a-zA-Z_#x2D]
+```
+
+referenced by:
+
+- CmdIdentifier
+- LongFlagOption
+- LongValueOption
 
 **Value:**
 

@@ -15,6 +15,8 @@ The POSIX standard is often cited when designing command line interfaces. Howeve
 
 A command MAY accept sub-commands, options, and operands.
 
+##### Note: This specification is available as a [formal grammar](#formal-grammar), or as a [railroad diagram](./assets/cli-railroad/index.md).
+
 ### Sub-commands
 
 -   A sub-command is a part of the command that acts as a command by itself. In other words, a sub-command is a recursive command.
@@ -65,23 +67,26 @@ A command MAY accept sub-commands, options, and operands.
 
 ## Formal Grammar
 
-```grammar
+```C
 Command ::= CmdIdentifier
 Command ::= CmdIdentifier Operand*
 Command ::= CmdIdentifier Option* Operand*
-CmdIdentifier ::= Alphanumeric*
+Command ::= CmdIdentifier Command*
+Command ::= CmdIdentifier Option* Command*
+CmdIdentifier ::= AlphanumericAnd*
 Option ::= ShortOption | LongOption
 ShortOption ::= ShortFlagOption | ShortValueOption
 LongOption ::= LongFlagOption | LongValueOption
 ShortFlagOption ::= '-' Alphanumeric
 ShortValueOption ::= '-' Alphanumeric OptionValueDelimiter Value
-LongFlagOption ::= '--' Alphanumeric Alphanumeric*
-LongValueOption ::= '--' Alphanumeric Alphanumeric* OptionValueDelimiter Value
+LongFlagOption ::= '--' Alphanumeric AlphanumericAnd*
+LongValueOption ::= '--' Alphanumeric AlphanumericAnd* OptionValueDelimiter Value
 OptionValueDelimiter ::= Space | '='
 Alphanumeric ::= [0-9a-zA-Z]
+AlphanumericAnd ::= [0-9a-zA-Z-_]
 Value ::= Char* | '"' ( Char | Space )* '"'
 Char ::= ( UnicodeExceptDoubleQuotes | '\"' )
-Space ::= ( U+0020 )\*
+Space ::= ( U+0020 )*
 Operand ::= Value
 ```
 

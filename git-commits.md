@@ -40,7 +40,7 @@ Version 2.0.0 of `conv/git-commits` extends [Conventional Commits v1.0.0](https:
 
 ## Format
 
-The commit message MUST be structured as one of the following options:
+The commit message MUST be structured as following:
 
 ```text
 <type>[optional scope]: <description>[:]

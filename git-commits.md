@@ -1,75 +1,100 @@
+
 # Git Commit Style
 
-```
-Code: conv/git-commits
-Version: 2.0.0
-Author: Muthu Kumar <muthukumar@thefeathers.in>
-Org: Feathers Studio
-```
+    Code: conv/git-commits
+    Version: 3.0.0
+    Author: Muthu Kumar <muthukumar@thefeathers.in>
+    Org: Feathers Studio
 
-## Specification
+## 1. Specification
 
-Version 2.0.0 of `conv/git-commits` extends [Conventional Commits v1.0.0](https://www.conventionalcommits.org/en/v1.0.0) with the following additions:
+Version 3.0.0 of `conv/git-commits` extends [Conventional Commits v1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) with the following additions.
 
--   Commit description and body MUST be in the present tense. `"feat: implements new parser"`, not imperative such as `"implement"`, or `"implemented"`.
+### 1.1. Format
 
--   If the commit has an optional body, the description MUST end with a colon. This MAY be ignored if the description is only followed by footers.
+A commit message MUST follow this structure:
 
--   Commit description, body, and trailers MUST be separated by a single empty line.
+    <type>[optional scope]: <description>[:]
 
--   One of the recommended commit types SHOULD be used:
+    [optional body]
 
-    -   `feat` — added new feature
-    -   `fix` — fixed a bug
-    -   `refactor` — code change that is neither a feature nor a fix
-    -   `chore` — miscellaneous changes to the repo
-    -   `build` — changes to build process or CI pipeline
-    -   `docs` — changes to documentation
-    -   `perf` — code change to improve performance
-    -   `test` — tests added or updated
-    -   `version` — new version tag, description MUST be semver
-    -   `merge` — merge commit, scope MUST be a reference to the merge request
-    -   `revert` — scope MUST be a hash of the original commit; description MUST be the commit message of the commit being reverted
+    [optional trailers]
 
--   One or more of the recommended trailers MAY be used:
-    -   `Fixes: <issue-number-or-ticket-reference>`
-    -   `Co-authored-by: <name> <<email>>`
-    -   `Signed-off-by: <name> <<email>>`
-    -   `BREAKING-CHANGE:`
-    -   `TODO:` — further commits are required towards this change
+The commit description, body, and trailers MUST be separated by a single empty line.
 
-## Format
+The trailing colon in the description MUST be present if a body follows. It MAY be omitted if the description is followed only by trailers or if no further content follows.
 
-The commit message MUST be structured as following:
+The trailing colon explicitly marks the description as introducing a body, making the message structure easier to recognise.
 
-```text
-<type>[optional scope]: <description>[:]
-<empty-line>
-[optional body]
-<empty-line>
-[optional trailers]
-```
+### 1.2. Description
 
-## Examples
+The commit description MUST use the present tense and MUST NOT use the imperative mood.
 
-```
-feat: add validation
-```
+This convention treats the commit message as a description of what the commit does, rather than an instruction for what it should do.
 
-```
-fix: invalidate emotion cache
-```
+For example, `feat: adds validation` is valid, whereas `feat: add validation` and `feat: added validation` are not.
 
-```
-chore: remove deprecate() calls:
+The description SHOULD be concise and clearly describe the change.
 
-No need to log deprecation warnings to console anymore.
-Users have been warned via release-notes, and v5 breaking
-change will be minor.
-```
+### 1.3. Body
 
-```
-feat: resist session racing using refcounting
+The body MAY provide additional context, reasoning, or details about the change.
 
-Closes: #1372
-```
+The present-tense and non-imperative requirements for the description DO NOT apply to the body. The body SHOULD use natural language appropriate to its purpose.
+
+### 1.4. Commit Types
+
+One of the following recommended commit types SHOULD be used:
+
+- `feat` — adds a new feature
+- `fix` — fixes a bug
+- `refactor` — changes code without adding a feature or fixing a bug
+- `chore` — makes miscellaneous repository changes
+- `build` — changes the build process or CI pipeline
+- `docs` — changes documentation
+- `perf` — improves performance
+- `test` — adds or updates tests
+- `version` — creates a new version tag; the description MUST be a semantic version
+- `merge` — creates a merge commit; the scope MUST reference the merge request or pull request
+- `revert` — reverts a previous commit; the scope MUST be the hash of the original commit, and the description MUST match the original commit's description
+
+### 1.5. Trailers
+
+One or more of the following recommended trailers MAY be used:
+
+- `Fixes: <issue-number-or-ticket-reference>`
+- `Co-authored-by: <name> <<email>>`
+- `Signed-off-by: <name> <<email>>`
+- `BREAKING-CHANGE:`
+- `TODO:` — indicates that further commits are required to complete the change
+
+Trailers MUST follow the body, if present, and MUST be separated from it by a single empty line. If no body is present, trailers MUST be separated from the description by a single empty line.
+
+## 2. Examples
+
+### 2.1. Description Only
+
+    feat: adds validation
+
+### 2.2. Description and Body
+
+    chore: removes deprecate() calls:
+
+    There is no need to log deprecation warnings to the console
+    anymore. Users have been warned via release notes, and the
+    v5 breaking change will be minor.
+
+### 2.3. Description and Trailers
+
+    feat: resists session racing using refcounting
+
+    Fixes: #1372
+
+### 2.4. Description, Body, and Trailers
+
+    fix: prevents duplicate session creation:
+
+    Concurrent requests could create multiple sessions for the
+    same user. The new locking mechanism prevents this race.
+
+    Fixes: #1372
